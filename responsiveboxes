@@ -30,7 +30,8 @@
         justify-content: center; /* Center items */
       }
       .sub {
-        flex: 0 0 calc(50% - 20px); /* 50% width for two boxes per row */
+        flex: 0 0 calc(40% - 20px); /* 50% width for two boxes per row */
+         height: 140px;
       }
     }
 
