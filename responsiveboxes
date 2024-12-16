@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Boxes</title>
+  <style>
+    .parrent {
+      background-color: cyan;
+      height: auto; /* Allow height to adjust dynamically */
+      display: flex;
+      flex-wrap: wrap; /* Enable wrapping of child elements */
+      justify-content: center;
+    }
+    .sub {
+      background-color: black;
+      color: white;
+      height: 100px;
+      width: 100px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Media query for screens less than 750px */
+    @media (max-width: 750px) {
+      .parrent {
+        justify-content: center; /* Center items */
+      }
+      .sub {
+        flex: 0 0 calc(50% - 20px); /* 50% width for two boxes per row */
+      }
+    }
+
+    @media (max-width: 450px) {
+      .parrent {
+        justify-content: center; /* Center all items */
+        flex-direction: column; /* Ensure vertical stacking */
+        align-items: center; /* Center items horizontally */
+      }
+      .sub {
+        flex: 0 0 100%; /* Full width for each box */
+        max-width: 300px; /* Optional: set a max width for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="parrent">
+    <div class="sub">Home</div>
+    <div class="sub">About</div>
+    <div class="sub">Contact Us</div>
+    <div class="sub">Info</div>
+  </div>
+</body>
+</html>
